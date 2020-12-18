@@ -1,5 +1,4 @@
 /*Fuentes*/
-
 @font-face{
     font-family: "JetBrainsMono";
     src: url('fonts/JetBrainsMono-VariableFont_wght.ttf');
@@ -7,6 +6,16 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src: url('fonts/websymbols-regular-webfont.eot');
+    src: url('fonts/websymbols-regular-webfont.eot#iefix') format('embedded-opentype'),
+        url('fonts/websymbols-regular-webfont.woff') format('woff'),
+        url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+        url('fonts/websymbols-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*
 Color principal body: #0d1117
@@ -23,16 +32,76 @@ body{
     background-color:#0d1117;
 }
 
-
 #mainContainer{
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
     width: 80%;
     margin: 0px auto;
 }
 
-#mainContainer h1{
-    background-color:#161b22;
+#mainContainer #header{
+    background-color: #161b22;
+    grid-column: 1/13;
+    height: 100px;
+    border-bottom: 1px solid #3dff53;
+}
+
+#mainContainer #header #logo{
     color: #00ff74;
     font-family: "JetBrainsMono";
     font-weight: bold;
+    font-size: 25px;
+    line-height: 100px;
+}
+
+#mainContainer #menu{
+    background-color: #161b22;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1/13;
+    display: grid;
+    height: 65px;
+}
+
+#mainContainer #menu #navegacion{
+    height: 100%;
+    list-style: none;
+    grid-column: 1/10;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer #menu #navegacion a{
+    text-decoration: none;
+    font-family: "JetBrainsMono";
+    font-size: 18px;
+    display: block;
+    color: #00ff74;
+    text-align: center;
+    line-height: 65px;
+    height: 65px;
+    transition: all 300ms;
+}
+
+#mainContainer #menu #navegacion a:hover{
+    background-color: #606266;
+    scale: 1.05;
+}
+
+
+#mainContainer #menu #social{
+    text-decoration: none;
+    height: 100%;
+    list-style: none;
+    grid-column: 10/13;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#mainContainer #menu #social a{
+    font-family: "WebSymbolsRegular";
+    font-weight: normal;
+    font-size: 35px;
+
 }
