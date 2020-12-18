@@ -1,0 +1,38 @@
+/*Fuentes*/
+
+@font-face{
+    font-family: "JetBrainsMono";
+    src: url('fonts/JetBrainsMono-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+Color principal body: #0d1117
+Color principal mas claro body: #161b22
+color de fuente 1: #00ff74
+
+*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color:#0d1117;
+}
+
+
+#mainContainer{
+    display: grid;
+    width: 80%;
+    margin: 0px auto;
+}
+
+#mainContainer h1{
+    background-color:#161b22;
+    color: #00ff74;
+    font-family: "JetBrainsMono";
+    font-weight: bold;
+}
