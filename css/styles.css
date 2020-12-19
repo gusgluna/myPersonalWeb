@@ -97,6 +97,8 @@ body{
     text-align: center;
     height: 100%;
     transition: all 300ms;
+    overflow: hidden;
+
 }
 
 #mainContainer #menu #social a img{
@@ -104,11 +106,12 @@ body{
     margin-top: 11px;
 }
 
-#twitterIcon:hover{
-    background-color: #1da1f2;
-}
 #githubIcon:hover{
     background-color: black;
+}
+
+#twitterIcon:hover{
+    background-color: #1da1f2;
 }
 
 #linkedinIcon:hover{
@@ -117,6 +120,18 @@ body{
 
 #facebookIcon:hover{
     background-color: #4267B2;
+}
+
+#githubIcon:hover img,
+#twitterIcon:hover img,
+#linkedinIcon:hover img,
+#facebookIcon:hover img{
+    animation: showSocial 250ms linear;
+}
+
+@keyframes showSocial{
+    from{transform:translateY(150%);}
+    to{transform:translateY(0%);}
 }
 
 
