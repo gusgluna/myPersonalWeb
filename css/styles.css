@@ -138,7 +138,17 @@ body{
 #p_test{
     color: white;
     grid-column: 1/13;
-    grid-row: 5/13;
+    grid-row: 3/12;
+}
+
+#footer{
+    height: 85px;
+    grid-column: 1/13;
+    grid-row: 12/13;
+    color: white;
+    text-align: center;
+    background-color: #161b22;
+    line-height: 85px;
 }
 
 
