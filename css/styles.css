@@ -24,6 +24,7 @@ body{
 #mainContainer{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     width: 85%;
     margin: 0px auto;
 }
@@ -69,7 +70,7 @@ body{
     color: #00ff74;
     text-align: center;
     line-height: 65px;
-    height: 100%;
+    height: 65px;
     transition: all 300ms;
 }
 
@@ -132,6 +133,12 @@ body{
 @keyframes showSocial{
     from{transform:translateY(150%);}
     to{transform:translateY(0%);}
+}
+
+#p_test{
+    color: white;
+    grid-column: 1/13;
+    grid-row: 5/13;
 }
 
 
