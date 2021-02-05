@@ -6,6 +6,13 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family: "Pixel-7";
+    src: url('fonts/advanced_pixel-7.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*
 Color principal body: #0d1117
 Color principal mas claro body: #161b22
@@ -38,9 +45,10 @@ body{
 
 #mainContainer #header #logo{
     color: #00ff74;
-    font-family: "JetBrainsMono";
+    /*font-family: "JetBrainsMono";*/
+    font-family: "Pixel-7";
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 100px;
 }
 
@@ -64,8 +72,8 @@ body{
 
 #mainContainer #menu #navegacion a{
     text-decoration: none;
-    font-family: "JetBrainsMono";
-    font-size: 18px;
+    font-family: "Pixel-7";
+    font-size: 30px;
     display: block;
     color: #00ff74;
     text-align: center;
