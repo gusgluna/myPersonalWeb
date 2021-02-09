@@ -150,6 +150,7 @@ body{
 }
 
 #footer{
+    font-family: "Pixel-7";
     height: 85px;
     grid-column: 1/13;
     grid-row: 12/13;
