@@ -31,7 +31,7 @@ body{
 #mainContainer{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    /*grid-template-rows:100px, 65px;*/
     width: 85%;
     margin: 0px auto;
 }
@@ -39,6 +39,7 @@ body{
 #mainContainer #header{
     background-color: #161b22;
     grid-column: 1/13;
+    /*grid-row: 1/2;*/
     height: 100px;
     border-bottom: 1px solid #3dff53;
 }
@@ -56,6 +57,7 @@ body{
     background-color: #161b22;
     grid-template-columns: repeat(12, 1fr);
     grid-column: 1/13;
+    /*grid-row: 2/3;*/
     display: grid;
     height: 65px;
 }
@@ -143,22 +145,31 @@ body{
     to{transform:translateY(0%);}
 }
 
-#p_test{
-    color: white;
-    grid-column: 1/13;
-    grid-row: 3/12;
-}
 
 #footer{
     font-family: "Pixel-7";
     font-size: 20px;
     height: 85px;
     grid-column: 1/13;
-    grid-row: 12/13;
     color: white;
     text-align: center;
     background-color: #161b22;
     line-height: 85px;
+}
+
+#main_canvas{
+    background-color: #313233;
+    height: 500px;
+    grid-column: 1/13;
+}
+
+#main_canvas p{
+    text-align: center;
+    line-height: 500px;
+    font-family: "Pixel-7";
+    color: #00ff74;
+    font-size: 50px;
+    text-transform: uppercase;
 }
 
 
