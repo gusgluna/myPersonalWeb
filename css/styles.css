@@ -157,20 +157,32 @@ body{
     line-height: 85px;
 }
 
-#main_canvas{
+#mainCanvas{
     background-color: #313233;
-    height: 500px;
+    height: 600px;
     grid-column: 1/13;
 }
 
-#main_canvas p{
+#mainCanvas p{
+    position: relative;
+    top:-50px;
+    margin-top: 0px;
+    display: block;
     text-align: center;
-    line-height: 500px;
+    /*line-height: 500px;*/
     font-family: "Pixel-7";
     color: #00ff74;
-    font-size: 50px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
+#ship{
+    border: 1px solid #00ff74;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
 
 
