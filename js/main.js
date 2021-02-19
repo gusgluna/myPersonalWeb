@@ -10,8 +10,13 @@ function mousePositionMC(){
     mainCanvas.addEventListener('mousemove', function(e){
         //console.log(`La posicion X: ${e.x}, La posicion Y: ${e.y}`); 
         var mainCanvasPos = mainCanvas.getBoundingClientRect();
-        spanX.textContent = Math.floor(e.x-mainCanvasPos.left);
-        spanY.textContent = Math.floor(e.y-mainCanvasPos.top);
+        let centerCanvasX =mainCanvasPos.width/2;
+        let centerCanvasY =mainCanvasPos.height/2;
+        spanX.textContent = Math.floor(e.x-mainCanvasPos.left - mainCanvasPos.width/2);
+        spanY.textContent = Math.floor(mainCanvasPos.height/2-(e.y-mainCanvasPos.top));
+        console.log(centerCanvasX);
+        console.log(centerCanvasY);
+
     });
 };
 
@@ -32,6 +37,11 @@ function centerMainCanvas(){
         ship.style.top = `${mainCanvasPos.height/2 - 25}px`;
     })
 };
+
+function rotateShip(){
+    let mainCanvasPos = mainCanvas.getBoundingClientRect();
+    
+}
 
 mousePositionMC();
 centerMainCanvas();
