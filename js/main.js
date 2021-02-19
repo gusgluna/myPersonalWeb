@@ -28,7 +28,7 @@ var mainCanvasPos = mainCanvas.getBoundingClientRect();
 ship.style.left = `${mainCanvasPos.width/2 - 25}px`;
 ship.style.top = `${mainCanvasPos.height/2 - 25}px`;
 
-function centerMainCanvas(){
+function centerShip(){
     var mainCanvasPos = mainCanvas.getBoundingClientRect();
     spanmcHeight.textContent = Math.floor(mainCanvasPos.height);
     spanmcWidth.textContent = Math.floor(mainCanvasPos.width);
@@ -59,7 +59,7 @@ function shot(){
 };
 
 rotateShip();
-centerMainCanvas();
+centerShip();
 shot();
 
 
