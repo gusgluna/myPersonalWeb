@@ -6,10 +6,12 @@ var spanmcHeight = document.getElementById("mcHeight");
 var spanmcWidth = document.getElementById("mcWidth");
 var ship = document.getElementById("ship");
 var spanAngle = document.getElementById("spanAngle");
+var spanClickX = document.getElementById("spanClickX");
+var spanClickY = document.getElementById("spanClickY");
 
-function mousePositionMC(){
+
+function rotateShip(){
     mainCanvas.addEventListener('mousemove', function(e){
-        //console.log(`La posicion X: ${e.x}, La posicion Y: ${e.y}`); 
         var mainCanvasPos = mainCanvas.getBoundingClientRect();
         let relativeXpos = e.x-mainCanvasPos.left - mainCanvasPos.width/2;
         let relativeYpos = mainCanvasPos.height/2-(e.y-mainCanvasPos.top);
@@ -35,17 +37,30 @@ function centerMainCanvas(){
         spanmcHeight.textContent = Math.floor(mainCanvasPos.height);
         spanmcWidth.textContent = Math.floor(mainCanvasPos.width);
         ship.style.left = `${mainCanvasPos.width/2 - 25}px`;
-        ship.style.top = `${mainCanvasPos.height/2 - 25}px`;
+        ship.style.top = `${mainCanvasPos.height/2 - 50}px`;
     })
 };
 
-function rotateShip(){
-    let mainCanvasPos = mainCanvas.getBoundingClientRect();
-    
-}
 
-mousePositionMC();
+function shot(){
+    mainCanvas.addEventListener('click', function(c){
+        let mainCanvasPos = mainCanvas.getBoundingClientRect();
+        let posX = c.clientX - mainCanvasPos.left;
+        let posY = c.clientY - mainCanvasPos.top;
+        spanClickX.textContent = Math.floor(posX);
+        spanClickY.textContent = Math.floor(posY);
+        let projectile = document.createElement('div');
+        projectile.className = "projectile";
+        projectile.style.left = `${posX + mainCanvasPos.left}px`;
+        projectile.style.top = `${posY + mainCanvasPos.top}px`;
+        mainCanvas.appendChild(projectile);
+        
+    })
+};
+
+rotateShip();
 centerMainCanvas();
+shot();
 
 
 

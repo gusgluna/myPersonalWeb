@@ -183,7 +183,16 @@ body{
     position: relative;
     top: 0px;
     left: 0px;
+    transform-origin: top center;
     transform: rotate(0deg);
 }
 
+.projectile{
+    height: 5px;
+    width: 5px;
+    background-color: #3dff53;
+    display: inside;
+    position: relative;
+    z-index: 500;
+}
 
