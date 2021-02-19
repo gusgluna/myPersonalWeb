@@ -5,18 +5,19 @@ var spanY = document.getElementById("posY");
 var spanmcHeight = document.getElementById("mcHeight");
 var spanmcWidth = document.getElementById("mcWidth");
 var ship = document.getElementById("ship");
+var spanAngle = document.getElementById("spanAngle");
 
 function mousePositionMC(){
     mainCanvas.addEventListener('mousemove', function(e){
         //console.log(`La posicion X: ${e.x}, La posicion Y: ${e.y}`); 
         var mainCanvasPos = mainCanvas.getBoundingClientRect();
-        let centerCanvasX =mainCanvasPos.width/2;
-        let centerCanvasY =mainCanvasPos.height/2;
-        spanX.textContent = Math.floor(e.x-mainCanvasPos.left - mainCanvasPos.width/2);
-        spanY.textContent = Math.floor(mainCanvasPos.height/2-(e.y-mainCanvasPos.top));
-        console.log(centerCanvasX);
-        console.log(centerCanvasY);
-
+        let relativeXpos = e.x-mainCanvasPos.left - mainCanvasPos.width/2;
+        let relativeYpos = mainCanvasPos.height/2-(e.y-mainCanvasPos.top);
+        let angleDeg = (((Math.atan2(relativeYpos, relativeXpos))*180)/Math.PI)*(-1) + 180;
+        spanX.textContent = Math.floor(relativeXpos);
+        spanY.textContent = Math.floor(relativeYpos);
+        spanAngle.textContent = Math.floor(angleDeg);
+        ship.style.transform = `rotate(${Math.floor(angleDeg)+90}deg)`
     });
 };
 
