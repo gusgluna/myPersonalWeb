@@ -32,7 +32,7 @@ body{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     /*grid-template-rows:100px, 65px;*/
-    width: 85%;
+    width: 100%;
     margin: 0px auto;
 }
 
@@ -45,13 +45,33 @@ body{
 }
 
 #mainContainer #header #logo{
+    margin-left: 80px;
     color: #00ff74;
-    /*font-family: "JetBrainsMono";*/
     font-family: "Pixel-7";
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 100px;
+    border-right: 2px solid #3dff53;
+    width: 235px;
+    overflow: hidden;
+    height: 100%;
+    letter-spacing: 2px;
 }
+
+.anim-typewriter{
+    animation: typewriter 1.2s steps(10) 500ms 1 normal both,
+               blinkTextCursor 1.2s steps(10) 500ms 1 normal both;
+  }
+
+  @keyframes typewriter{
+    from{width: 0px;}
+    to{width: 235px;}
+  }
+  @keyframes blinkTextCursor{
+    0%{border-right-color: #3dff53;}
+    99%{border-right-color: #3dff53;}
+    100%{border-right-color: transparent;}
+  }
 
 #mainContainer #menu{
     background-color: #161b22;
