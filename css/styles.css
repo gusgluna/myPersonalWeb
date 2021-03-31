@@ -105,10 +105,39 @@ body{
 }
 
 #mainContainer #menu #navegacion a:hover{
-    background-color: #606266;
-    scale: 1.05;
+    background-color: #4c4d4e;
+    /*transform: scale(1.05);*/
+    z-index: 500;
+    
 }
 
+#mainContainer #menu #navegacion a:hover .selector{
+    animation: selector 1s linear infinite;
+}
+
+
+.selector{
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+/*
+@keyframes selector {
+    0%{
+        border-right: 1px solid #3dff53;
+        width: 100%;
+    }
+    50%{
+        border-right: transparent;
+        width: 0px;
+    }
+    100%{
+        border-right: 1px solid #3dff53;
+        width: 100%;
+    }
+}*/
 
 #mainContainer #menu #social{
     text-decoration: none;
@@ -120,10 +149,6 @@ body{
 }
 
 #mainContainer #menu #social a{
-    font-family: "WebSymbolsRegular";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 35px;
     display: block;
     text-align: center;
     height: 100%;
